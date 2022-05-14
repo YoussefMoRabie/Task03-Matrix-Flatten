@@ -13,9 +13,9 @@ int main()
 
 	cout << "Please add the 3 dimensions for 3D matrix\n";
 	cin >> n >> m >> p;
-	while (n < 0 || m < 0 || p < 0)
+	while (n < 1 || m < 1 || p < 1)
 	{
-		cout << "Sorry, but you entered negative values, which is incorrect\n";
+		cout << "Sorry, but you entered invalid values, which is incorrect\n";
 		cout << "Please add the 3 dimensions for 3D matrix\n";
 		cin >> n >> m >> p;
 	}
@@ -57,7 +57,9 @@ int main()
     /////////////////////////////////////////////////////////////////////////////////////////////
     //create suitable vector
     vector <int> flattened(suitable_vector( n, m, p));
-    cout << "1D vector is created,but it's empty\n";
+    cout << "1D vector is created,but it's empty,Press any Enter to continue";
+    cin.get();
+    cin.get();
     for (int i = 0; i < n; i++) {
 
         for (int j = 0; j < m; j++)
